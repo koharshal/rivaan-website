@@ -194,6 +194,22 @@ h3 { font-size: 19px; font-weight: 600; letter-spacing: -.01em; margin: 0 0 8px;
 /* Industries */
 .industries { gap: 30px 56px; }
 
+/* Customers */
+.logos { margin-top: 36px; display: flex; flex-wrap: wrap; align-items: center; gap: 26px 60px; }
+.logo {
+  color: var(--on-soft);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -.02em;
+  opacity: .85;
+  transition: color .2s, opacity .2s;
+}
+.logo:hover { color: var(--primary); opacity: 1; }
+.logo.tight { font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.logo.wide { font-weight: 500; text-transform: uppercase; letter-spacing: .14em; }
+.logo.two b { font-weight: 700; }
+.logo.two span { font-weight: 400; }
+
 /* Why + Progress lists */
 .why, .progress {
   list-style: none;
