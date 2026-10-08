@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "https://www.rivaan.com/*"
+  to = "https://rivaan.com/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet, noimageindex"
