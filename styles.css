@@ -6,9 +6,6 @@
   --primary: #6750a4;
   --primary-c: #eaddff;
   --on-primary-c: #21005d;
-  --primary-c2: #e8def8;
-  --on-primary-c2: #1d192b;
-  --primary-c3: #f3ecff;
   --outline: #cac4d0;
   --outline-v: #e7e0ec;
   --shadow-1: 0 1px 3px rgba(29, 27, 32, .08);
@@ -157,13 +154,9 @@ h3 { font-size: 19px; font-weight: 600; letter-spacing: -.01em; margin: 0 0 8px;
 .tile h3 { font-size: 20px; margin-bottom: 8px; }
 .tile p { margin: 0; color: var(--on-soft); font-size: 15.5px; }
 
-/* Tonal modules */
-.module { border-radius: 24px; padding: 30px; }
-.module p { margin: 0; font-size: 15px; opacity: .94; }
-.m-primary { background: var(--primary-c); color: var(--on-primary-c); }
-.m-secondary { background: var(--primary-c2); color: var(--on-primary-c2); }
-.m-tertiary { background: var(--primary-c3); color: var(--on-primary-c); }
-.m-neutral { background: #ffffff; color: var(--on-surface); border: 1px solid var(--outline-v); }
+/* Cards */
+.module { background: #ffffff; border: 1px solid var(--outline-v); border-radius: 24px; padding: 30px; }
+.module p { margin: 0; font-size: 15px; color: var(--on-soft); }
 
 /* Steps */
 .steps {
