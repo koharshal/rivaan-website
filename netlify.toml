@@ -1,6 +1,6 @@
 [[redirects]]
-  from = "https://www.rivaan.com/*"
-  to = "https://rivaan.com/:splat"
+  from = "https://www.rivaan.co/*"
+  to = "https://rivaan.co/:splat"
   status = 301
   force = true
 
