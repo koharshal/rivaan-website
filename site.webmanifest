@@ -1,0 +1,19 @@
+{
+  "name": "Rivaan",
+  "short_name": "Rivaan",
+  "description": "Rivaan finds customers for Indian manufacturers, and is paid when they buy.",
+  "lang": "en-GB",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F5F4F0",
+  "theme_color": "#15173A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

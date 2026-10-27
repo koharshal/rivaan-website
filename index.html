@@ -1,283 +1,325 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rivaan Commerce</title>
-<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rivaan</title>
+<meta name="description" content="Rivaan finds customers for Indian manufacturers, and is paid when they buy.">
+<link rel="canonical" href="https://rivaan.co/">
+<meta name="theme-color" content="#15173A">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Rivaan">
+<meta property="og:title" content="Rivaan">
+<meta property="og:description" content="Rivaan finds customers for Indian manufacturers, and is paid when they buy.">
+<meta property="og:url" content="https://rivaan.co/">
+<meta property="og:image" content="https://rivaan.co/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rivaan: we find customers for Indian manufacturers, and we are paid when they buy.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rivaan">
+<meta name="twitter:description" content="Rivaan finds customers for Indian manufacturers, and is paid when they buy.">
+<meta name="twitter:image" content="https://rivaan.co/assets/og-image.png">
+<meta name="twitter:image:alt" content="Rivaan: we find customers for Indian manufacturers, and we are paid when they buy.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" id="fonts" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" media="print">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap"></noscript>
+<link rel="stylesheet" href="main.css">
 </head>
-<body id="top">
-
-<header class="site-header">
-  <div class="wrap nav">
-    <a class="brand" href="#top">Rivaan <b>Commerce</b></a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
-      <span></span><span></span>
-    </button>
-    <nav id="site-nav" class="site-nav" aria-label="Primary">
-      <ul>
-        <li><a href="#product">Product</a></li>
-        <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#industries">Industries</a></li>
-        <li><a href="#company">Company</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Rivaan home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#FF7759"/><path d="M22 46 V24" stroke="#15173A" stroke-width="8" stroke-linecap="round" fill="none"/><path d="M22 33 C22 26 27 22 35 22" stroke="#15173A" stroke-width="8" stroke-linecap="round" fill="none"/><circle cx="46" cy="22" r="5" fill="#15173A"/></svg>
+      Rivaan
+    </a>
+    <nav class="links" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#work">Work</a>
+      <a href="#team">Team</a>
+      <a class="btn" href="#contact">Get in touch</a>
     </nav>
   </div>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="wrap">
-      <h1>AI agents that find export buyers for <em>Indian manufacturers</em></h1>
-      <p class="lede">Rivaan Commerce researches global markets, identifies the companies that import what Indian factories make, and runs personalised outreach to win them, so a manufacturer without an export team can still sell to the world.</p>
-      <div class="cta">
-        <a class="btn" href="mailto:hello@rivaan.co">Email us</a>
-        <a class="btn tonal" href="#how-it-works">See how it works</a>
-      </div>
-      <p class="proof">Research agents running daily across export product lines · Performance-based: we earn when our partners win new customers</p>
+<main id="top">
+<section class="band night hero grain">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <canvas id="globe" aria-label="A globe with routes travelling from India to buyers in export markets" role="img"></canvas>
+  <div class="wrap">
+    <h1><span class="w" style="--i:0">We</span> <span class="w" style="--i:1">find</span> <span class="w" style="--i:2">customers</span> <span class="w" style="--i:3">for</span> <span class="w" style="--i:4">Indian</span> <span class="w" style="--i:5">manufacturers,</span> <span class="hl"><span class="w" style="--i:6">and</span> <span class="w" style="--i:7">we</span> <span class="w" style="--i:8">are</span> <span class="w" style="--i:9">paid</span> <span class="w" style="--i:10">when</span> <span class="w" style="--i:11">they</span> <span class="w" style="--i:12">buy.</span></span></h1>
+    <p class="lede">A go-to-market partner for owners of technical manufacturing businesses with ₹100 to 10,000 crore in annual sales. We find the buyers, reach the people who decide, and hand your team warm leads, in India and abroad.</p>
+    <div class="ctas">
+      <a class="btn" href="#contact">Book a conversation <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+    <div class="fit">
+      <span><b>A flat fee</b> towards our running costs</span>
+      <span><b>A share</b> of sales to new customers we bring</span>
+      <span><b>Nothing</b> on customers you already have</span>
+    </div>
+  </div>
+</section>
 
-      <div class="map">
-        <svg viewBox="0 0 1000 320" aria-hidden="true" focusable="false">
-          <path class="route" d="M300,250 C400,120 560,90 700,105"/>
-          <path class="route acc" d="M300,250 C420,190 570,175 720,185"/>
-          <path class="route" d="M300,250 C305,180 270,145 250,105"/>
-          <path class="route" d="M300,250 C450,300 650,285 830,260"/>
-          <circle class="halo" cx="300" cy="250" r="15"/>
-          <circle class="halo" cx="300" cy="250" r="26"/>
-          <circle class="hub" cx="300" cy="250" r="6"/>
-          <circle class="dot" cx="700" cy="105" r="4"/>
-          <circle class="dot" cx="720" cy="185" r="4"/>
-          <circle class="dot" cx="250" cy="105" r="4"/>
-          <circle class="dot" cx="830" cy="260" r="4"/>
-          <text class="lbl" x="712" y="98">North America</text>
-          <text class="lbl" x="732" y="181">Europe</text>
-          <text class="lbl" x="150" y="98">United Kingdom</text>
-          <text class="lbl" x="842" y="256">Gulf</text>
-          <text class="lbl" x="266" y="277">India</text>
+
+<section class="band" id="problem">
+  <div class="wrap">
+    <div class="split">
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <div class="head rv"><h2>The buyers exist. They have never heard of you.</h2></div>
+        <div class="probs">
+          <div class="prob rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12"/><path d="M4 20h16M9 20v-6h6v6M9 10h6"/></svg><div><h3>A product that needs explaining</h3><p>A buyer cannot judge it from a photograph. It needs a drawing, a standard or a process explained before anyone pays for it.</p></div></div>
+          <div class="prob rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg><div><h3>Fifty buyers, five names</h3><p>Often fifty companies in the world should be buying it. Most owners could name five of them.</p></div></div>
+          <div class="prob rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/><path d="M9 12l6 3M15 12l-6 3"/></svg><div><h3>A shop window that stopped working</h3><p>A website unchanged for years, no case studies and no outreach. The right buyers have no way to find you.</p></div></div>
+        </div>
+      </div>
+      <div class="dotart rv">
+        <h3>Fifty companies should buy from you. <span style="color:var(--coral-deep)">You know five.</span></h3>
+        <svg class="d50" id="d50" viewBox="0 0 340 170" role="img" aria-label="A grid of fifty dots. Five are lit in coral; the other forty five fill in indigo as the buyers we find."><circle cx="17" cy="17" r="11" style="--d:392ms"/><circle cx="51" cy="17" r="11" style="--d:756ms"/><circle cx="85" cy="17" r="11" style="--d:1008ms"/><circle class="k" cx="119" cy="17" r="11" style="--d:1260ms"/><circle cx="153" cy="17" r="11" style="--d:1232ms"/><circle cx="187" cy="17" r="11" style="--d:980ms"/><circle cx="221" cy="17" r="11" style="--d:1176ms"/><circle cx="255" cy="17" r="11" style="--d:644ms"/><circle cx="289" cy="17" r="11" style="--d:364ms"/><circle cx="323" cy="17" r="11" style="--d:1344ms"/><circle cx="17" cy="51" r="11" style="--d:112ms"/><circle cx="51" cy="51" r="11" style="--d:168ms"/><circle class="k" cx="85" cy="51" r="11" style="--d:476ms"/><circle cx="119" cy="51" r="11" style="--d:1036ms"/><circle cx="153" cy="51" r="11" style="--d:56ms"/><circle cx="187" cy="51" r="11" style="--d:868ms"/><circle cx="221" cy="51" r="11" style="--d:196ms"/><circle cx="255" cy="51" r="11" style="--d:812ms"/><circle cx="289" cy="51" r="11" style="--d:700ms"/><circle cx="323" cy="51" r="11" style="--d:448ms"/><circle cx="17" cy="85" r="11" style="--d:1372ms"/><circle cx="51" cy="85" r="11" style="--d:504ms"/><circle cx="85" cy="85" r="11" style="--d:588ms"/><circle cx="119" cy="85" r="11" style="--d:1148ms"/><circle cx="153" cy="85" r="11" style="--d:0ms"/><circle cx="187" cy="85" r="11" style="--d:1316ms"/><circle cx="221" cy="85" r="11" style="--d:924ms"/><circle class="k" cx="255" cy="85" r="11" style="--d:952ms"/><circle cx="289" cy="85" r="11" style="--d:224ms"/><circle cx="323" cy="85" r="11" style="--d:252ms"/><circle cx="17" cy="119" r="11" style="--d:336ms"/><circle class="k" cx="51" cy="119" r="11" style="--d:84ms"/><circle cx="85" cy="119" r="11" style="--d:1064ms"/><circle cx="119" cy="119" r="11" style="--d:728ms"/><circle cx="153" cy="119" r="11" style="--d:1204ms"/><circle cx="187" cy="119" r="11" style="--d:28ms"/><circle cx="221" cy="119" r="11" style="--d:840ms"/><circle cx="255" cy="119" r="11" style="--d:1120ms"/><circle cx="289" cy="119" r="11" style="--d:308ms"/><circle cx="323" cy="119" r="11" style="--d:672ms"/><circle cx="17" cy="153" r="11" style="--d:784ms"/><circle cx="51" cy="153" r="11" style="--d:1288ms"/><circle cx="85" cy="153" r="11" style="--d:280ms"/><circle cx="119" cy="153" r="11" style="--d:532ms"/><circle cx="153" cy="153" r="11" style="--d:896ms"/><circle cx="187" cy="153" r="11" style="--d:1092ms"/><circle class="k" cx="221" cy="153" r="11" style="--d:420ms"/><circle cx="255" cy="153" r="11" style="--d:560ms"/><circle cx="289" cy="153" r="11" style="--d:140ms"/><circle cx="323" cy="153" r="11" style="--d:616ms"/></svg>
+        <div class="legend"><span><i style="background:var(--coral)"></i>Buyers who know you</span><span><i style="background:var(--indigo)"></i>Buyers we find and reach</span></div>
+      </div>
+    </div>
+    <p class="gapline rv">What is missing is a way to reach those buyers. <span>That is the gap we close.</span></p>
+  </div>
+</section>
+
+<section class="band night pricing grain" id="pricing">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>We grow when you grow.</h2>
+      <p>You pay a small monthly contribution to our running costs, and a share of the sales from the customers we bring. Nothing on the business you already have.</p>
+    </div>
+    <div class="price-grid">
+      <div class="pcards">
+        <div class="pcard spot rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><div><p class="big">A flat fee</p><p>each month, towards our running costs</p></div></div>
+        <div class="pcard spot rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><div><p class="big">A share</p><p>of sales to the new customers we bring, for a fixed period, falling each year as your team takes over</p></div></div>
+        <div class="pcard zero spot rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/></svg></span><div><p class="big">0%</p><p>on the customers you already have</p></div></div>
+      </div>
+      <figure class="chart rv" id="chart" style="margin:0">
+        <svg viewBox="0 0 560 270" role="img" aria-label="Illustration: sales from new customers rise over time while our share falls">
+          <defs>
+            <linearGradient id="ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF7759" stop-opacity=".42"/><stop offset="1" stop-color="#FF7759" stop-opacity="0"/></linearGradient>
+          </defs>
+          <g stroke="#2D3070" stroke-width="1"><path d="M20 230H545"/><path d="M20 170H545" stroke-dasharray="3 6"/><path d="M20 110H545" stroke-dasharray="3 6"/><path d="M20 50H545" stroke-dasharray="3 6"/></g>
+          <path class="fadein" d="M20 226 C 120 222, 170 200, 240 170 S 380 80, 545 40 L545 230 L20 230Z" fill="url(#ar)"/>
+          <path class="draw" style="--len:640" d="M20 226 C 120 222, 170 200, 240 170 S 380 80, 545 40" fill="none" stroke="#FF7759" stroke-width="3.5" stroke-linecap="round"/>
+          <g class="fadein"><rect x="70" y="150" width="54" height="80" rx="6" fill="#4B57D9" opacity=".9"/><rect x="200" y="170" width="54" height="60" rx="6" fill="#4B57D9" opacity=".75"/><rect x="330" y="190" width="54" height="40" rx="6" fill="#4B57D9" opacity=".6"/><rect x="460" y="210" width="54" height="20" rx="6" fill="#4B57D9" opacity=".45"/></g>
+          <circle cx="545" cy="40" r="7" fill="#FF7759"/><circle cx="545" cy="40" r="16" fill="#FF7759" opacity=".2"><animate attributeName="r" values="8;20;8" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".35;0;.35" dur="2.4s" repeatCount="indefinite"/></circle>
+          <text x="22" y="258" fill="#9DA0B4" font-family="IBM Plex Sans, Arial, sans-serif" font-size="13">First order</text>
+          <text x="545" y="258" fill="#9DA0B4" font-family="IBM Plex Sans, Arial, sans-serif" font-size="13" text-anchor="end">Years later</text>
         </svg>
+        <figcaption class="cap"><span><i style="background:var(--coral)"></i>Your sales to the customers we bring</span><span><i style="background:var(--indigo)"></i>Our share, falling each year</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="band mist" id="how">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>What we do, in five steps</h2>
+      <p>A whole market goes in. Your team gets the few buyers worth their time.</p>
+    </div>
+    <div class="funnel rv">
+      <canvas id="funnel" role="img" aria-label="Animation: hundreds of companies flow in from the left, are filtered at each step, and arrive as one warm lead on the right"></canvas>
+      <div class="ends"><span>Every company that could buy</span><b>A warm lead for your team</b></div>
+    </div>
+    <div class="steps">
+      <div class="step rv"><span class="n">1</span><h3>Find the buyers</h3><p>From trade data, maps and project pipelines, we name the buyers, distributors and agents who should buy from you.</p></div>
+      <div class="step rv"><span class="n">2</span><h3>Rank them</h3><p>Each one is scored against your strengths, so effort goes where you win.</p></div>
+      <div class="step rv"><span class="n">3</span><h3>Find the right person</h3><p>Who decides, who buys and who can stop the deal, with a message for each.</p></div>
+      <div class="step rv"><span class="n">4</span><h3>Reach them</h3><p>We write, send and follow up, handle the replies, and hand your team a warm lead.</p></div>
+      <div class="step rv"><span class="n">5</span><h3>Build what closes</h3><p>Brand, website, decks and material a technical buyer will actually read.</p></div>
+    </div>
+    <p class="people rv">People do the judgement, the writing and the relationships. Software does the research and the first drafts, faster than a person could.</p>
+  </div>
+</section>
+
+<section class="band night grain">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Three people decide. Each hears something different.</h2>
+      <p>Inside the same company, the engineer, the buyer and the approver want different things. We write to each of them.</p>
+    </div>
+    <div class="orgwrap">
+      <div class="org" aria-hidden="true">
+        <svg viewBox="0 0 1000 110" preserveAspectRatio="none">
+          <path d="M500 40 C 500 80, 167 70, 167 110"/><path d="M500 40 V110"/><path d="M500 40 C 500 80, 833 70, 833 110"/>
+          <path class="flow" d="M500 40 C 500 80, 167 70, 167 110"/><path class="flow" d="M500 40 V110"/><path class="flow" d="M500 40 C 500 80, 833 70, 833 110"/>
+        </svg>
+        <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l6-4v4l6-4v4l6-4v16z"/><path d="M7 17h2M11 17h2M15 17h2"/></svg>One buyer company</div>
+      </div>
+      <div class="roles">
+        <div class="role spot rv"><h3>The engineer who qualifies you</h3><p>Wants drawings, test methods and proof of capability.</p><span class="bubble">Here is our <b>test report</b> and a drawing we made for a similar part.</span></div>
+        <div class="role spot rv"><h3>The buyer who places the order</h3><p>Wants price, minimum order, delivery and payment terms.</p><span class="bubble">Our <b>price, minimum order</b> and delivery terms for your volumes.</span></div>
+        <div class="role spot rv"><h3>Quality, who can stop it</h3><p>Wants certificates, audits and references.</p><span class="bubble">Our <b>certificates</b>, last audit and two references you can call.</span></div>
       </div>
     </div>
-  </section>
-
-  <section id="customers" class="section alt">
-    <div class="wrap">
-      <h2>Customers</h2>
-      <div class="logos">
-        <span class="logo tight">Blackcobra</span>
-        <span class="logo two"><b>Alex</b> <span>Panels</span></span>
-        <span class="logo wide">Voltkon</span>
-        <span class="logo">Ganesh Multitech</span>
-        <span class="logo two"><b>Rhythmsoft</b> <span>Automation</span></span>
-      </div>
+    <div class="flowline rv" aria-label="How we reach them">
+      <span>LinkedIn</span><em>+</em><span>Search</span><em>+</em><span>Email</span><em>+</em><span>Secret Sauce</span><em>→</em><span class="end">A warm lead to your team</span>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="problem" class="section">
-    <div class="wrap">
-      <h2>Buyers are looking for Indian suppliers. Most can't find them.</h2>
-      <div class="grid-3">
-        <div class="tile">
-          <h3>Demand is moving.</h3>
-          <p>Manufacturers in Europe, the UK and the US are actively adding suppliers outside China. The India-UK trade agreement, in force since July 2026, removed duties on most Indian goods, and Europe has been closing chemical and industrial capacity, pushing buyers to look abroad.</p>
+<section class="band">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Material that closes the sale</h2>
+      <p>Outreach only works if what the buyer sees is convincing. Where your brand holds the sale back, we fix it.</p>
+    </div>
+    <div class="bento">
+      <div class="tile feature wide rv"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg><h3>Website and search</h3><p>A site written to be found in search and AI answers, and trusted when a buyer lands on it.</p><div class="mock" aria-hidden="true"><div class="bar"><i></i><i></i><i></i></div><div class="bd"><span class="t"></span><span style="width:82%"></span><span style="width:70%"></span><span class="c"></span></div></div></div>
+      <div class="tile wide rv"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg><h3>Brand refresh</h3><p>Name, look and story that hold up in front of a foreign buyer.</p>
+        <svg viewBox="0 0 300 70" aria-hidden="true" style="margin-top:auto;width:100%;height:auto"><rect x="0" y="10" width="50" height="50" rx="14" fill="#FF7759"/><rect x="62" y="10" width="50" height="50" rx="14" fill="#15173A"/><rect x="124" y="10" width="50" height="50" rx="14" fill="#4B57D9"/><rect x="186" y="10" width="50" height="50" rx="14" fill="#EAE8F0"/><text x="250" y="48" font-family="Bricolage Grotesque, Georgia, serif" font-weight="800" font-size="34" fill="#15173A">Aa</text></svg>
+      </div>
+      <div class="tile rv"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="12" rx="2"/><path d="M12 15v6M8 21h8"/></svg><h3>Decks and capability documents</h3><p>What your sales team sends after the first call.</p></div>
+      <div class="tile rv"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/></svg><h3>Data sheets and case studies</h3><p>The answers an engineer asks for in the first technical email.</p></div>
+      <div class="tile rv"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2 .8 3 3 3 6"/></svg><h3>LinkedIn presence</h3><p>Company and founder pages, and campaigns to the people we target.</p></div>
+      <div class="tile feature wide rv" style="grid-column:span 6"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><h3>Trade fair meetings</h3><p>Exhibitors and visitors identified, and meetings booked before you arrive. You walk into the hall with a full diary.</p></div>
+    </div>
+    <p class="aside rv">Website fixes are part of the monthly fee. Full brand and website programmes are scoped and priced on their own.</p>
+  </div>
+</section>
+
+<section class="band mist" id="work">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>What the work has delivered</h2>
+      <p>For clients, and for businesses we run ourselves.</p>
+    </div>
+    <div class="cases">
+      <div class="case dark spot rv">
+        <p class="fig num">20 sites</p>
+        <p class="lead">with EV chargers installed for EZIT, from 175 leads we generated in three months.</p>
+        <p>We studied Google Maps and upcoming construction to find highway hotels, then reached the owners.</p>
+        <div class="viz"><svg class="d175" viewBox="0 0 250 70" role="img" aria-label="175 dots for the leads, 20 in coral for the sites installed"><circle cx="5" cy="5" r="3.2" style="--d:0ms"/><circle cx="15" cy="5" r="3.2" style="--d:0ms"/><circle cx="25" cy="5" r="3.2" style="--d:0ms"/><circle cx="35" cy="5" r="3.2" style="--d:0ms"/><circle cx="45" cy="5" r="3.2" style="--d:0ms"/><circle cx="55" cy="5" r="3.2" style="--d:0ms"/><circle cx="65" cy="5" r="3.2" style="--d:0ms"/><circle cx="75" cy="5" r="3.2" style="--d:0ms"/><circle cx="85" cy="5" r="3.2" style="--d:0ms"/><circle cx="95" cy="5" r="3.2" style="--d:0ms"/><circle cx="105" cy="5" r="3.2" style="--d:0ms"/><circle cx="115" cy="5" r="3.2" style="--d:0ms"/><circle cx="125" cy="5" r="3.2" style="--d:0ms"/><circle cx="135" cy="5" r="3.2" style="--d:0ms"/><circle cx="145" cy="5" r="3.2" style="--d:0ms"/><circle class="w" cx="155" cy="5" r="3.2" style="--d:0ms"/><circle class="w" cx="165" cy="5" r="3.2" style="--d:60ms"/><circle cx="175" cy="5" r="3.2" style="--d:0ms"/><circle cx="185" cy="5" r="3.2" style="--d:0ms"/><circle cx="195" cy="5" r="3.2" style="--d:0ms"/><circle cx="205" cy="5" r="3.2" style="--d:0ms"/><circle cx="215" cy="5" r="3.2" style="--d:0ms"/><circle cx="225" cy="5" r="3.2" style="--d:0ms"/><circle cx="235" cy="5" r="3.2" style="--d:0ms"/><circle class="w" cx="245" cy="5" r="3.2" style="--d:120ms"/><circle cx="5" cy="15" r="3.2" style="--d:0ms"/><circle cx="15" cy="15" r="3.2" style="--d:0ms"/><circle cx="25" cy="15" r="3.2" style="--d:0ms"/><circle cx="35" cy="15" r="3.2" style="--d:0ms"/><circle cx="45" cy="15" r="3.2" style="--d:0ms"/><circle cx="55" cy="15" r="3.2" style="--d:0ms"/><circle cx="65" cy="15" r="3.2" style="--d:0ms"/><circle cx="75" cy="15" r="3.2" style="--d:0ms"/><circle cx="85" cy="15" r="3.2" style="--d:0ms"/><circle cx="95" cy="15" r="3.2" style="--d:0ms"/><circle cx="105" cy="15" r="3.2" style="--d:0ms"/><circle cx="115" cy="15" r="3.2" style="--d:0ms"/><circle cx="125" cy="15" r="3.2" style="--d:0ms"/><circle cx="135" cy="15" r="3.2" style="--d:0ms"/><circle cx="145" cy="15" r="3.2" style="--d:0ms"/><circle cx="155" cy="15" r="3.2" style="--d:0ms"/><circle cx="165" cy="15" r="3.2" style="--d:0ms"/><circle cx="175" cy="15" r="3.2" style="--d:0ms"/><circle cx="185" cy="15" r="3.2" style="--d:0ms"/><circle cx="195" cy="15" r="3.2" style="--d:0ms"/><circle cx="205" cy="15" r="3.2" style="--d:0ms"/><circle class="w" cx="215" cy="15" r="3.2" style="--d:180ms"/><circle cx="225" cy="15" r="3.2" style="--d:0ms"/><circle cx="235" cy="15" r="3.2" style="--d:0ms"/><circle cx="245" cy="15" r="3.2" style="--d:0ms"/><circle cx="5" cy="25" r="3.2" style="--d:0ms"/><circle cx="15" cy="25" r="3.2" style="--d:0ms"/><circle class="w" cx="25" cy="25" r="3.2" style="--d:240ms"/><circle cx="35" cy="25" r="3.2" style="--d:0ms"/><circle cx="45" cy="25" r="3.2" style="--d:0ms"/><circle cx="55" cy="25" r="3.2" style="--d:0ms"/><circle cx="65" cy="25" r="3.2" style="--d:0ms"/><circle cx="75" cy="25" r="3.2" style="--d:0ms"/><circle cx="85" cy="25" r="3.2" style="--d:0ms"/><circle cx="95" cy="25" r="3.2" style="--d:0ms"/><circle cx="105" cy="25" r="3.2" style="--d:0ms"/><circle cx="115" cy="25" r="3.2" style="--d:0ms"/><circle cx="125" cy="25" r="3.2" style="--d:0ms"/><circle class="w" cx="135" cy="25" r="3.2" style="--d:300ms"/><circle cx="145" cy="25" r="3.2" style="--d:0ms"/><circle cx="155" cy="25" r="3.2" style="--d:0ms"/><circle cx="165" cy="25" r="3.2" style="--d:0ms"/><circle cx="175" cy="25" r="3.2" style="--d:0ms"/><circle cx="185" cy="25" r="3.2" style="--d:0ms"/><circle cx="195" cy="25" r="3.2" style="--d:0ms"/><circle cx="205" cy="25" r="3.2" style="--d:0ms"/><circle cx="215" cy="25" r="3.2" style="--d:0ms"/><circle cx="225" cy="25" r="3.2" style="--d:0ms"/><circle cx="235" cy="25" r="3.2" style="--d:0ms"/><circle cx="245" cy="25" r="3.2" style="--d:0ms"/><circle cx="5" cy="35" r="3.2" style="--d:0ms"/><circle class="w" cx="15" cy="35" r="3.2" style="--d:360ms"/><circle cx="25" cy="35" r="3.2" style="--d:0ms"/><circle cx="35" cy="35" r="3.2" style="--d:0ms"/><circle cx="45" cy="35" r="3.2" style="--d:0ms"/><circle class="w" cx="55" cy="35" r="3.2" style="--d:420ms"/><circle cx="65" cy="35" r="3.2" style="--d:0ms"/><circle cx="75" cy="35" r="3.2" style="--d:0ms"/><circle cx="85" cy="35" r="3.2" style="--d:0ms"/><circle cx="95" cy="35" r="3.2" style="--d:0ms"/><circle cx="105" cy="35" r="3.2" style="--d:0ms"/><circle cx="115" cy="35" r="3.2" style="--d:0ms"/><circle cx="125" cy="35" r="3.2" style="--d:0ms"/><circle cx="135" cy="35" r="3.2" style="--d:0ms"/><circle cx="145" cy="35" r="3.2" style="--d:0ms"/><circle cx="155" cy="35" r="3.2" style="--d:0ms"/><circle cx="165" cy="35" r="3.2" style="--d:0ms"/><circle class="w" cx="175" cy="35" r="3.2" style="--d:480ms"/><circle cx="185" cy="35" r="3.2" style="--d:0ms"/><circle cx="195" cy="35" r="3.2" style="--d:0ms"/><circle class="w" cx="205" cy="35" r="3.2" style="--d:540ms"/><circle cx="215" cy="35" r="3.2" style="--d:0ms"/><circle cx="225" cy="35" r="3.2" style="--d:0ms"/><circle cx="235" cy="35" r="3.2" style="--d:0ms"/><circle cx="245" cy="35" r="3.2" style="--d:0ms"/><circle cx="5" cy="45" r="3.2" style="--d:0ms"/><circle cx="15" cy="45" r="3.2" style="--d:0ms"/><circle cx="25" cy="45" r="3.2" style="--d:0ms"/><circle cx="35" cy="45" r="3.2" style="--d:0ms"/><circle cx="45" cy="45" r="3.2" style="--d:0ms"/><circle cx="55" cy="45" r="3.2" style="--d:0ms"/><circle cx="65" cy="45" r="3.2" style="--d:0ms"/><circle cx="75" cy="45" r="3.2" style="--d:0ms"/><circle cx="85" cy="45" r="3.2" style="--d:0ms"/><circle class="w" cx="95" cy="45" r="3.2" style="--d:600ms"/><circle cx="105" cy="45" r="3.2" style="--d:0ms"/><circle cx="115" cy="45" r="3.2" style="--d:0ms"/><circle cx="125" cy="45" r="3.2" style="--d:0ms"/><circle cx="135" cy="45" r="3.2" style="--d:0ms"/><circle cx="145" cy="45" r="3.2" style="--d:0ms"/><circle cx="155" cy="45" r="3.2" style="--d:0ms"/><circle class="w" cx="165" cy="45" r="3.2" style="--d:660ms"/><circle cx="175" cy="45" r="3.2" style="--d:0ms"/><circle cx="185" cy="45" r="3.2" style="--d:0ms"/><circle class="w" cx="195" cy="45" r="3.2" style="--d:720ms"/><circle cx="205" cy="45" r="3.2" style="--d:0ms"/><circle cx="215" cy="45" r="3.2" style="--d:0ms"/><circle cx="225" cy="45" r="3.2" style="--d:0ms"/><circle cx="235" cy="45" r="3.2" style="--d:0ms"/><circle cx="245" cy="45" r="3.2" style="--d:0ms"/><circle cx="5" cy="55" r="3.2" style="--d:0ms"/><circle cx="15" cy="55" r="3.2" style="--d:0ms"/><circle class="w" cx="25" cy="55" r="3.2" style="--d:780ms"/><circle cx="35" cy="55" r="3.2" style="--d:0ms"/><circle cx="45" cy="55" r="3.2" style="--d:0ms"/><circle cx="55" cy="55" r="3.2" style="--d:0ms"/><circle cx="65" cy="55" r="3.2" style="--d:0ms"/><circle cx="75" cy="55" r="3.2" style="--d:0ms"/><circle cx="85" cy="55" r="3.2" style="--d:0ms"/><circle cx="95" cy="55" r="3.2" style="--d:0ms"/><circle cx="105" cy="55" r="3.2" style="--d:0ms"/><circle class="w" cx="115" cy="55" r="3.2" style="--d:840ms"/><circle cx="125" cy="55" r="3.2" style="--d:0ms"/><circle cx="135" cy="55" r="3.2" style="--d:0ms"/><circle cx="145" cy="55" r="3.2" style="--d:0ms"/><circle class="w" cx="155" cy="55" r="3.2" style="--d:900ms"/><circle cx="165" cy="55" r="3.2" style="--d:0ms"/><circle cx="175" cy="55" r="3.2" style="--d:0ms"/><circle cx="185" cy="55" r="3.2" style="--d:0ms"/><circle class="w" cx="195" cy="55" r="3.2" style="--d:960ms"/><circle cx="205" cy="55" r="3.2" style="--d:0ms"/><circle cx="215" cy="55" r="3.2" style="--d:0ms"/><circle cx="225" cy="55" r="3.2" style="--d:0ms"/><circle cx="235" cy="55" r="3.2" style="--d:0ms"/><circle class="w" cx="245" cy="55" r="3.2" style="--d:1020ms"/><circle cx="5" cy="65" r="3.2" style="--d:0ms"/><circle cx="15" cy="65" r="3.2" style="--d:0ms"/><circle cx="25" cy="65" r="3.2" style="--d:0ms"/><circle cx="35" cy="65" r="3.2" style="--d:0ms"/><circle cx="45" cy="65" r="3.2" style="--d:0ms"/><circle cx="55" cy="65" r="3.2" style="--d:0ms"/><circle cx="65" cy="65" r="3.2" style="--d:0ms"/><circle cx="75" cy="65" r="3.2" style="--d:0ms"/><circle class="w" cx="85" cy="65" r="3.2" style="--d:1080ms"/><circle cx="95" cy="65" r="3.2" style="--d:0ms"/><circle cx="105" cy="65" r="3.2" style="--d:0ms"/><circle cx="115" cy="65" r="3.2" style="--d:0ms"/><circle cx="125" cy="65" r="3.2" style="--d:0ms"/><circle cx="135" cy="65" r="3.2" style="--d:0ms"/><circle cx="145" cy="65" r="3.2" style="--d:0ms"/><circle cx="155" cy="65" r="3.2" style="--d:0ms"/><circle cx="165" cy="65" r="3.2" style="--d:0ms"/><circle cx="175" cy="65" r="3.2" style="--d:0ms"/><circle cx="185" cy="65" r="3.2" style="--d:0ms"/><circle cx="195" cy="65" r="3.2" style="--d:0ms"/><circle cx="205" cy="65" r="3.2" style="--d:0ms"/><circle cx="215" cy="65" r="3.2" style="--d:0ms"/><circle cx="225" cy="65" r="3.2" style="--d:0ms"/><circle cx="235" cy="65" r="3.2" style="--d:0ms"/><circle class="w" cx="245" cy="65" r="3.2" style="--d:1140ms"/></svg></div>
+      </div>
+      <div class="case dark spot rv">
+        <p class="fig num">₹5 crore</p>
+        <p class="lead">in sales for BlackCobra and Alex Panels, from over ₹50 crore of qualified lead value.</p>
+        <p>We found projects near their finishing stage on Google Maps, checked timelines against RERA data, and found distributors.</p>
+        <div class="viz bars" role="img" aria-label="Bar comparison: ₹50 crore of lead value and ₹5 crore of sales">
+          <div><span>Qualified lead value, ₹50 crore</span><i style="width:100%;background:var(--indigo)"></i></div>
+          <div><span>Sales closed, ₹5 crore</span><i style="width:10%;min-width:14px;background:var(--coral)"></i></div>
         </div>
-        <div class="tile">
-          <h3>Supply is invisible.</h3>
-          <p>India has thousands of capable mid-sized manufacturers, but most have no export sales team, thin websites and no way to reach the right buyer in Germany or the UK. Buyers can't find them, and they can't find buyers.</p>
-        </div>
-        <div class="tile">
-          <h3>Traditional help doesn't scale.</h3>
-          <p>Trade fairs are expensive and occasional, agents take large commissions, and agencies sell activity, not results. Researching markets and reaching thousands of qualified buyers by hand needs a team most manufacturers will never hire.</p>
-        </div>
+      </div>
+      <div class="case light spot rv">
+        <p class="fig text">RFQs from elevator and tractor makers</p>
+        <p>For our client Ganesh Multitech, we rebuilt the website, brand and search presence, then targeted buyers showing intent on LinkedIn.</p>
+        <div class="viz rfq" aria-hidden="true"><span><i></i>Elevator maker<b>RFQ</b></span><span><i></i>Tractor maker<b>RFQ</b></span></div>
       </div>
     </div>
-  </section>
+    <div class="qstrip rv">
+      <div class="qn"><div><b>12</b><small>product lines</small></div><div><b>12</b><small>countries</small></div><div><b>213</b><small>suppliers</small></div></div>
+      <p>For Qumek, our electrical parts export business, we built the brand and website, product pages for twelve product lines, market pages for twelve countries covering duty, carbon tax and compliance, and mapped 213 Indian suppliers. <a href="https://qumek.com" target="_blank" rel="noopener">qumek.com</a></p>
+    </div>
+  </div>
+</section>
 
-  <section id="product" class="section alt">
-    <div class="wrap">
-      <h2>One AI engine for export growth</h2>
-      <p class="intro">We built a set of AI agents that do the work of an export sales department: research, buyer discovery, outreach and follow-through, with people reviewing every important decision.</p>
-      <div class="grid-2">
-        <article class="module">
-          <h3>Market radar</h3>
-          <p>Agents study trade data, competitors and buyer requirements for each product every day, and rank the countries and customer types with the strongest demand for what a manufacturer makes.</p>
-        </article>
-        <article class="module">
-          <h3>Buyer finder</h3>
-          <p>Agents build verified lists of companies that import the relevant products, sorted by customer type, with the people to contact and the evidence behind each name.</p>
-        </article>
-        <article class="module">
-          <h3>Outreach studio</h3>
-          <p>Every customer type gets its own message, written for its needs and grounded in verified research, sent through dedicated email infrastructure and reviewed by our team before it goes out.</p>
-        </article>
-        <article class="module">
-          <h3>Lead desk</h3>
-          <p>Every reply and enquiry is logged in one shared register with its source, passed to the manufacturer quickly, and tracked through presentations, costings and quotations to an order.</p>
-        </article>
+<section class="band">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Three ways to work with us</h2>
+      <p>Every engagement shares in the sales we bring. What changes is how much we build and run for you.</p>
+    </div>
+    <div class="models">
+      <div class="model rv">
+        <h3>Outreach</h3>
+        <p>Your material is good enough. You want the buyers found and reached.</p>
+        <ul><li>Buyer research and ranking</li><li>Outreach and replies handled</li><li>Website fixes included</li></ul>
+        <p class="terms">Flat monthly fee<br>+ share of sales we bring</p>
+      </div>
+      <div class="model feature rv">
+        <h3>Growth partnership</h3>
+        <p>Your brand holds the sale back. We rebuild it, then take it to market.</p>
+        <ul><li>Everything in Outreach</li><li>Brand, website and search</li><li>Decks, data sheets, LinkedIn</li></ul>
+        <p class="terms">Build fee, quoted once<br>+ flat monthly fee<br>+ share of sales we bring</p>
+      </div>
+      <div class="model rv">
+        <h3>Group programme</h3>
+        <p>A business group with several companies, brands and websites to build and run.</p>
+        <ul><li>A team across your companies</li><li>Brands and sites built and run</li><li>Outreach by company and market</li></ul>
+        <p class="terms">Retainer sized to the work<br>+ share of sales we bring</p>
       </div>
     </div>
-  </section>
-
-  <section id="how-it-works" class="section">
-    <div class="wrap">
-      <h2>From product to purchase order</h2>
-      <ol class="steps">
-        <li><span><b>Understand the product.</b> We start with what the manufacturer makes, its certifications and its capacity.</span></li>
-        <li><span><b>Map the market.</b> Market radar ranks the countries and customer types where demand and fit are strongest.</span></li>
-        <li><span><b>Find the buyers.</b> Buyer finder builds a list of real companies with the people to contact.</span></li>
-        <li><span><b>Reach out.</b> Outreach studio runs tailored campaigns for each customer type.</span></li>
-        <li><span><b>Convert.</b> Qualified enquiries go to the manufacturer, and we help with presentations, costings and quotations.</span></li>
-        <li><span><b>Learn and adjust.</b> Every reply feeds back into the research, so targeting improves every week.</span></li>
-      </ol>
+    <div class="commit rv">
+      <svg class="seal" viewBox="0 0 56 56" aria-hidden="true"><defs><path id="ring" d="M28 28 m-21 0 a21 21 0 1 1 42 0 a21 21 0 1 1 -42 0"/></defs><g><text><textPath href="#ring">TWELVE MONTHS · EXCLUSIVE · </textPath></text></g><circle cx="28" cy="28" r="9" fill="#FF7759"/></svg>
+      <p><b>Twelve months, and exclusive.</b> Technical sales take time, so every engagement runs for at least a year. With that commitment, we do not work for a competitor chasing the same buyers.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="services" class="section alt">
-    <div class="wrap">
-      <h2>Two ways we work</h2>
-      <div class="grid-2">
-        <article class="module">
-          <h3>For Indian manufacturers: export growth</h3>
-          <p>We run the engine for manufacturers who want new export customers. The model is performance-based: a small monthly fee covers direct running costs, and we earn mainly through a share of sales to the new customers we bring in. If we don't deliver customers, we don't earn.</p>
-        </article>
-        <article class="module">
-          <h3>For overseas buyers: precision components from India</h3>
-          <p>For buyers who want one accountable partner in India, we supply precision components made to drawing and inspected before they ship: busbars, lugs and terminals, flexible connectors, stamped and turned parts, contacts and coils, welded subassemblies, and brass fittings. Our research engine finds the best-matched manufacturers; we manage quality and delivery.</p>
-        </article>
+<section class="band mist">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Who we take on</h2>
+      <p>We work with a small number of companies at a time, by choice. A business joins when all six are true.</p>
+    </div>
+    <div class="tests rv">
+      <div class="test"><h3><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Large orders</h3><p>Our share of each order sets what the work is worth.</p></div><div class="test"><h3><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A product that needs explaining</h3><p>If a photograph sells it, we add little.</p></div><div class="test"><h3><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Buyers we can name</h3><p>A concentrated set of companies we can find and list.</p></div><div class="test"><h3><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>An owner who decides</h3><p>A committee will not sign a revenue share.</p></div><div class="test"><h3><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A visible gap</h3><p>A dated site, no case studies, no outreach.</p></div><div class="test"><h3><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Repeat revenue</h3><p>Recurring B2B sales, not one-off projects.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="team">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Who you will work with</h2>
+      <p>Rivaan is run by Harshal and Rahul. Between them they have built manufacturing businesses, software products and B2B AI platforms, and taken them to market.</p>
+    </div>
+    <div class="team">
+      <div class="person spot rv"><div class="ph"><img src="assets/harshal.jpg" alt="Harshal Kokane" width="96" height="96" loading="lazy" decoding="async"></div><div><h3>Harshal Kokane</h3><p>B2B supply chains, brand building and AI-led growth</p></div></div>
+      <div class="person spot rv"><div class="ph"><img src="assets/rahul.jpg" alt="Rahul Garg" width="96" height="96" loading="lazy" decoding="async"></div><div><h3>Rahul Garg</h3><p>Manufacturing, industrial marketing and export go-to-market</p></div></div>
+    </div>
+    <div class="skills">
+      <div class="skill spot rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l6-4v4l6-4v4l6-4v16z"/></svg><h3>Manufacturing</h3><p>Businesses we have built and run ourselves.</p></div>
+      <div class="skill spot rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg><h3>Software and AI</h3><p>Products and platforms built, so the engine is our own.</p></div>
+      <div class="skill spot rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg><h3>Across industries</h3><p>Engineering, building products, energy and more.</p></div>
+      <div class="skill spot rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.5h6c0-1.1.4-1.9 1-2.5A6 6 0 0 0 12 3z"/></svg><h3>Marketing</h3><p>So we understand your business before we sell it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band night close grain" id="contact">
+  <canvas id="routes" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <h2 class="statement rv">Your next fifty buyers are out there. <span class="hl">Let us find them.</span></h2>
+    <div class="next" id="next">
+      <div class="nx rv"><h3>A conversation</h3><p>An hour with you, working through our discovery questions.</p></div>
+      <div class="nx rv"><h3>One product line, assessed</h3><p>The market picture for it, and a first list of named buyers.</p></div>
+      <div class="nx rv"><h3>Terms, then outreach</h3><p>We agree the way of working that fits, and start.</p></div>
+    </div>
+    <div class="contact rv">
+      <div>
+        <h3>Get in touch</h3>
+        <p>Tell us what you make and who you sell to today. Where we see a clear way to add to your sales, we will set up a first conversation.</p>
+      </div>
+      <div class="mail">
+        <a href="mailto:contact@rivaan.co"><code id="email">contact@rivaan.co</code></a>
+        <button class="copy" type="button" id="copy">Copy</button>
       </div>
     </div>
-  </section>
-
-  <section id="industries" class="section">
-    <div class="wrap">
-      <h2>Where we focus</h2>
-      <div class="grid-2 industries">
-        <article class="tile">
-          <h3>Electrical</h3>
-          <p>Switchgear, transformers, power electronics, energy storage, EV charging and data-centre power: busbars, lugs, connectors, stampings, contacts, coils and assemblies.</p>
-        </article>
-        <article class="tile">
-          <h3>Plumbing and sanitary brass</h3>
-          <p>Fittings, adapters, valve components and trim for plumbing brands, valve makers and distributors.</p>
-        </article>
-        <article class="tile">
-          <h3>HVAC and refrigeration</h3>
-          <p>Brass service valves, flare fittings and copper tube assemblies for air-conditioning, heat pump and refrigeration makers.</p>
-        </article>
-        <article class="tile">
-          <h3>Specialty materials</h3>
-          <p>Masterbatches, polymer additives, compounds, pigments and dyes from Indian makers to formulators and processors abroad.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="why" class="section alt">
-    <div class="wrap">
-      <h2>Why manufacturers and buyers trust the process</h2>
-      <ul class="why">
-        <li><b>Evidence, not guesswork.</b> Every market claim and buyer on our lists carries a source.</li>
-        <li><b>People in the loop.</b> Our team reviews research conclusions and every outreach message before it is used.</li>
-        <li><b>Responsible outreach.</b> We contact businesses only, follow email rules in each market, and honour every opt-out.</li>
-        <li><b>Aligned incentives.</b> We are paid mainly when our partners win customers, so we only pursue buyers who are likely to order.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="progress" class="section">
-    <div class="wrap">
-      <h2>Where we are today</h2>
-      <ul class="progress">
-        <li>Research agents running daily on export product lines, building market, buyer and supplier intelligence.</li>
-        <li>A structured map of 31 customer types across electrical, plumbing, HVAC and appliance markets, matched to the products Indian manufacturers can supply.</li>
-        <li>Supply partners across precision components, brass parts and specialty materials.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="company" class="section alt">
-    <div class="wrap">
-      <h2>About Rivaan Commerce</h2>
-      <p class="intro">Rivaan Commerce Private Limited is an Indian company building AI for cross-border manufacturing trade. We combine software that does the research and outreach work of a large export team with hands-on experience in manufacturing, finishing and sourcing, so the buyers we find are matched with suppliers who can deliver.</p>
-    </div>
-  </section>
-
-  <section id="faq" class="section">
-    <div class="wrap">
-      <h2>Questions, answered</h2>
-      <div class="faq">
-        <details open>
-          <summary>Who do you work with?</summary>
-          <p>Indian manufacturers that want export customers, and overseas companies that want reliable suppliers in India.</p>
-        </details>
-        <details>
-          <summary>Which countries do you target?</summary>
-          <p>We start with the UK, Germany and the Benelux, and the Gulf, and expand where research shows strong demand.</p>
-        </details>
-        <details>
-          <summary>How do you charge manufacturers?</summary>
-          <p>A small monthly fee covers direct running costs such as data and email infrastructure. We earn mainly through a share of sales to new customers we bring in.</p>
-        </details>
-        <details>
-          <summary>Do you replace a manufacturer's sales team?</summary>
-          <p>No. We find and qualify the buyers and help with presentations and quotations; the manufacturer approves every quotation and owns the customer relationship.</p>
-        </details>
-        <details>
-          <summary>How do you use AI?</summary>
-          <p>Agents research markets, find and verify buyers, and draft tailored outreach. Our team reviews conclusions and messages before they are used.</p>
-        </details>
-        <details>
-          <summary>Is my data safe?</summary>
-          <p>Business information shared with us stays confidential and is used only for that partner's work.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section alt">
-    <div class="wrap">
-      <h2>Talk to us</h2>
-      <p class="intro">Tell us what you make. We will get back with a growth plan within 2 days.</p>
-      <p class="email"><a href="mailto:hello@rivaan.co">hello@rivaan.co</a></p>
-    </div>
-  </section>
+  </div>
+</section>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap foot">
-    <span>© 2026 Rivaan Commerce Private Limited</span>
-    <nav aria-label="Footer">
-      <a href="#product">Product</a>
-      <a href="#how-it-works">How it works</a>
-      <a href="#industries">Industries</a>
-      <a href="#company">Company</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<footer class="band night">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Rivaan home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#FF7759"/><path d="M22 46 V24" stroke="#15173A" stroke-width="8" stroke-linecap="round" fill="none"/><path d="M22 33 C22 26 27 22 35 22" stroke="#15173A" stroke-width="8" stroke-linecap="round" fill="none"/><circle cx="46" cy="22" r="5" fill="#15173A"/></svg>
+      Rivaan
+    </a>
+    <p>Rivaan Commerce Pvt Ltd</p>
   </div>
 </footer>
 
-<script>
-  (function () {
-    var btn = document.querySelector('.menu-toggle');
-    var nav = document.getElementById('site-nav');
-    if (!btn || !nav) return;
-    btn.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    nav.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') {
-        nav.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
-  })();
-</script>
+<script src="main.js" defer></script>
 </body>
 </html>

@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rivaan Commerce">
-  <rect width="64" height="64" rx="14" fill="#6750a4"/>
-  <text x="32" y="46" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#ffffff">R</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rivaan">
+  <rect width="64" height="64" rx="18" fill="#FF7759"/>
+  <path d="M22 46 V24" stroke="#15173A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M22 33 C22 26 27 22 35 22" stroke="#15173A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <circle cx="46" cy="22" r="5" fill="#15173A"/>
 </svg>
