@@ -62,11 +62,11 @@
     var N=900,pts=[];var ga=Math.PI*(3-Math.sqrt(5));
     for(var i=0;i<N;i++){var y=1-(i/(N-1))*2,r=Math.sqrt(1-y*y),th=ga*i;pts.push([Math.cos(th)*r,y,Math.sin(th)*r]);}
     var INDIA=vec(21,78.5);
-    var MARKETS=[['Germany',51,10],['United Kingdom',54,-2],['Netherlands',52.2,5.3],['Belgium',50.6,4.5],['France',46.5,2.3],['Sweden',62,15],['Italy',42.8,12.5],['Poland',52,19.5],['Spain',40.2,-3.7],['UAE',24.3,54.4],['United States',39,-98]];
+    var MARKETS=[['Germany',51,10],['United Kingdom',54,-2],['Netherlands',52.2,5.3],['Belgium',50.6,4.5],['France',46.5,2.3],['Sweden',62,15],['Italy',42.8,12.5],['Poland',52,19.5],['Spain',40.2,-3.7],['UAE',24.3,54.4],['United States',39,-98],['Kenya',-0.02,37.9],['South Africa',-30.56,22.94]];
     MARKETS=MARKETS.map(function(m){return {name:m[0],v:vec(m[1],m[2])};});
     var arcs=[],lastSpawn=-9999,next=0,t0=performance.now();
     function slerp(a,b,t){var d=Math.acos(Math.max(-1,Math.min(1,a[0]*b[0]+a[1]*b[1]+a[2]*b[2])));if(d<1e-4)return a;var s=Math.sin(d),k1=Math.sin((1-t)*d)/s,k2=Math.sin(t*d)/s;return [a[0]*k1+b[0]*k2,a[1]*k1+b[1]*k2,a[2]*k1+b[2]*k2];}
-    var order=[0,9,1,4,10,6,2,7,3,8,5];
+    var order=[0,9,11,1,4,12,10,6,2,7,3,8,5];
     function draw(now){
       var s=fitCanvas(c),W=s.w,H=s.h;ctx.setTransform(DPR,0,0,DPR,0,0);ctx.clearRect(0,0,W,H);
       var t=(now-t0)/1000;
