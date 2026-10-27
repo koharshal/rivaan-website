@@ -285,10 +285,10 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--coral);outline-offs
 @media (max-width:860px){.next{grid-template-columns:1fr}}
 .nx{position:relative;display:flex;flex-direction:column;gap:8px;padding-top:22px;font-size:15px}
 .nx::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--night-line)}
-.nx::after{content:"";position:absolute;top:0;left:0;height:2px;width:100%;background:var(--coral);transform:scaleX(var(--p,0));transform-origin:left;transition:transform 1.2s var(--ease)}
+.nx::after{content:"";position:absolute;top:0;left:0;height:2px;width:100%;background:var(--coral);transform:scaleX(var(--p,0));transform-origin:left;transition:transform 2.8s var(--ease)}
 .play .nx::after{--p:1}
-.play .nx:nth-child(2)::after{transition-delay:.4s}
-.play .nx:nth-child(3)::after{transition-delay:.8s}
+.play .nx:nth-child(2)::after{transition-delay:.6s}
+.play .nx:nth-child(3)::after{transition-delay:1.2s}
 .nx h3{font-size:19px}
 .contact{position:relative;overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;gap:32px;background:rgba(35,38,90,.75);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:22px;padding:30px;align-items:center;box-shadow:inset 0 0 0 1px var(--night-line)}
 @media (max-width:860px){.contact{grid-template-columns:1fr;padding:26px 22px}}
