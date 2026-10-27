@@ -68,10 +68,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--coral);outline-offs
 .hero h1 .hl{position:relative}
 .hero .lede{font-size:clamp(16px,1.35vw,18px);max-width:540px;color:var(--on-night);animation:rise 1s var(--ease) .5s both}
 .hero .ctas{display:flex;gap:14px;flex-wrap:wrap;animation:rise 1s var(--ease) .65s both}
-.fit{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:14px;color:var(--on-night);padding-top:20px;border-top:1px solid var(--night-line);max-width:640px;animation:rise 1s var(--ease) .8s both}
-.fit span{display:flex;gap:8px;align-items:center}
-.fit span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--coral);flex:none}
-.fit b{color:var(--on-night-hi);font-weight:600}
 .legend-live{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--on-night);animation:rise 1s var(--ease) .95s both}
 .legend-live i{width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 0 rgba(255,119,89,.6);animation:ping 2s infinite}
 @keyframes ping{70%{box-shadow:0 0 0 10px rgba(255,119,89,0)}100%{box-shadow:0 0 0 0 rgba(255,119,89,0)}}
